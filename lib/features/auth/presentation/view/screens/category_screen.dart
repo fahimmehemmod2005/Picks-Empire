@@ -20,8 +20,6 @@ class CategoryScreen extends StatelessWidget {
       'Stocks',
       'Crypto',
       'Casino',
-      'Hamstar',
-      'Doge',
     ];
 
     return MyScaffold(
@@ -38,7 +36,7 @@ class CategoryScreen extends StatelessWidget {
                   AppSizeBox.height25,
                   const TitleSubtitleBar(
                     title: "Which categories do you like?",
-                    subtitle: "You can select up to 5",
+                    subtitle: "You can select up to 3",
                   ),
                   AppSizeBox.height25,
 
@@ -52,7 +50,7 @@ class CategoryScreen extends StatelessWidget {
                         label: Text(category),
                         selected: isSelected,
                         onSelected: (_) {
-                          provider.toggleCategory(context, category);
+                          provider.toggleCategory(context, category.toString().trim());
                         },
                         selectedColor: AppColor.main,
                         backgroundColor: Colors.grey.shade700,
@@ -94,7 +92,7 @@ class CategoryScreen extends StatelessWidget {
                         context,
                         RouteName.loginScreen,
                       );
-                      print(provider.selectedCategories);
+                      print(provider.selectedCategories.toString());
                     },
                   ),
                   AppSizeBox.height10

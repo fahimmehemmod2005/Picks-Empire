@@ -104,11 +104,11 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                         label: "Continue",
                         onTap: () {
                           if (_formKey.currentState!.validate()) {
-                            Navigator.pushReplacementNamed(context, RouteName.categoryScreen);
-                            print('Name: ${_name.text}');
-                            print('Email: ${_email.text}');
-                            print('Password: ${_password.text}');
-                            print('Confirm Password: ${_rePassword.text}');
+                            Navigator.pushNamed(context, RouteName.categoryScreen);
+                            print('Name: ${_name.text.trim()}');
+                            print('Email: ${_email.text.trim()}');
+                            print('Password: ${_password.text.trim()}');
+                            print('Confirm Password: ${_rePassword.text.trim()}');
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
                                 content: Text('Account create success.', style: TextStyle(fontSize: 16, color: Colors.black,),),

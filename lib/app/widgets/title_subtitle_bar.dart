@@ -17,6 +17,7 @@ class TitleSubtitleBar extends StatelessWidget {
           title ?? "",
           style: AppTextStyles.size24w700(color: AppColor.title),
         ),
+        AppSizeBox.height5,
         Text(
           subtitle ?? "",
           style: AppTextStyles.size14w400(color: AppColor.title),

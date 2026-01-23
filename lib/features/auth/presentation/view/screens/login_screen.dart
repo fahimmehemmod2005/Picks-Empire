@@ -91,8 +91,10 @@ class _LoginScreenState extends State<LoginScreen> {
                           Text('Remember Me',style: AppTextStyles.size14w400(color: Colors.white70),),
                           const Spacer(),
                           TextButton(
-                              onPressed: (){},
-                              child: Text('Forgot Password',style: TextStyle(color: CupertinoColors.systemRed),)
+                              child: Text('Forgot Password',style: TextStyle(color: CupertinoColors.systemRed),),
+                              onPressed: (){
+                                Navigator.pushNamed(context, RouteName.forgotScreen);
+                              },
                           )
                         ],
                       ),
@@ -103,8 +105,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         label: "login",
                         onTap: () {
                           if (_formKey.currentState!.validate()) {
-                            print('Email: ${_userName.text}');
-                            print('Password: ${_password.text}');
+                            print('Email: ${_userName.text.trim()}');
+                            print('Password: ${_password.text.trim()}');
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
                                 content: Text('login success.', style: TextStyle(fontSize: 16, color: Colors.black,),),

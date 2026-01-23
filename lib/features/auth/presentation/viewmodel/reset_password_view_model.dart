@@ -1,20 +1,20 @@
 import 'package:flutter/cupertino.dart';
 
-class LoginViewModel extends ChangeNotifier {
+class ResetPasswordViewModel extends ChangeNotifier{
   bool _isPasswordHidden = true;
+  bool _isConfirmHidden = true;
+
   bool get isPasswordHidden => _isPasswordHidden;
+  bool get isConfirmHidden => _isConfirmHidden;
 
   void togglePassword() {
     _isPasswordHidden = !_isPasswordHidden;
     notifyListeners();
   }
 
-  // Email Validator
-  String? validateEmail(String? email) {
-    if (email == null || email.isEmpty) return 'Email is required';
-    final emailRegex = RegExp(r'^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$');
-    if (!emailRegex.hasMatch(email)) return 'Enter a valid email';
-    return null;
+  void toggleConfirm() {
+    _isConfirmHidden = !_isConfirmHidden;
+    notifyListeners();
   }
 
   // Password Validator
@@ -32,11 +32,12 @@ class LoginViewModel extends ChangeNotifier {
     return null;
   }
 
-  bool _isChecked = false;
-  bool get isChecked => _isChecked;
-
-  void toggle(bool? value) {
-    _isChecked = value ?? false;
-    notifyListeners();
+  // Confirm Password Validator
+  String? validateConfirmPassword(String? confirmPassword, String password) {
+    if (confirmPassword == null || confirmPassword.isEmpty) {
+      return 'Confirm Password is required';
+    }
+    if (confirmPassword != password) return 'Passwords do not match';
+    return null;
   }
 }

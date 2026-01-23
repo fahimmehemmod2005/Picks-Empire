@@ -14,13 +14,13 @@ class CategoryViewModel extends ChangeNotifier{
     if (_selectedCategories.contains(category)) {
       _selectedCategories.remove(category);
     } else {
-      if (_selectedCategories.length < 5) {
+      if (_selectedCategories.length < 3) {
         _selectedCategories.add(category);
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: const Text(
-              'Only 5 item you can selected',
+              'Only 3 item you can selected',
               style: TextStyle(fontSize: 16, color: Colors.black),
             ),
             backgroundColor: AppColor.main,
