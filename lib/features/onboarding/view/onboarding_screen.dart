@@ -68,7 +68,7 @@ class OnboardingScreen extends StatelessWidget {
                       Text(
                         onboarding[provider.currentIndex]['title']!,
                         textAlign: TextAlign.center,
-                        style: AppTextStyles.size28w600(color: Colors.white),
+                        style: AppTextStyles.size24w700(color: Colors.white),
                       ),
 
                       Text(
