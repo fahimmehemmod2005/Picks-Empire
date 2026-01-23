@@ -11,10 +11,7 @@ class CategoryViewModel extends ChangeNotifier{
   }
 
   void toggleCategory(BuildContext context, String category) {
-    if (_selectedCategories.contains(category)) {
-      _selectedCategories.remove(category);
-    } else {
-      if (_selectedCategories.length < 3) {
+    if (_selectedCategories.length < 3) {
         _selectedCategories.add(category);
       } else {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -33,7 +30,6 @@ class CategoryViewModel extends ChangeNotifier{
           ),
         );
       }
-    }
     notifyListeners();
   }
 

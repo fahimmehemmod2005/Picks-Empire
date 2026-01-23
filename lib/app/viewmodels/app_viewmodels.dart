@@ -5,6 +5,7 @@ import 'package:fdahunter/features/auth/presentation/viewmodel/login_view_model.
 import 'package:fdahunter/features/auth/presentation/viewmodel/otp_view_model.dart';
 import 'package:fdahunter/features/auth/presentation/viewmodel/resend_button_view_model.dart';
 import 'package:fdahunter/features/auth/presentation/viewmodel/reset_password_view_model.dart';
+import 'package:fdahunter/features/main_screen/viewmodel/main_view_model.dart';
 import 'package:fdahunter/features/onboarding/viewmodel/onboarding_view_model.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
@@ -27,6 +28,8 @@ class AppViewModels {
       create: (_) => ResendButtonViewModel(),
     ),ChangeNotifierProvider<ResetPasswordViewModel>(
       create: (_) => ResetPasswordViewModel(),
+    ),ChangeNotifierProvider<MainViewModel>(
+      create: (_) => MainViewModel(),
     ),
   ];
 }

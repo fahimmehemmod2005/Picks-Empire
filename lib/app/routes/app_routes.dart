@@ -4,6 +4,7 @@ import 'package:fdahunter/features/auth/presentation/view/screens/forgot_screen.
 import 'package:fdahunter/features/auth/presentation/view/screens/login_screen.dart';
 import 'package:fdahunter/features/auth/presentation/view/screens/otp_screen.dart';
 import 'package:fdahunter/features/auth/presentation/view/screens/reset_password_screen.dart';
+import 'package:fdahunter/features/main_screen/view/main_screen.dart';
 import 'package:fdahunter/features/onboarding/view/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import '../../features/splash/splash_screen.dart';
@@ -27,6 +28,7 @@ class AppRoutes {
     RouteName.forgotScreen: (context) => const ForgotScreen(),
     RouteName.otpScreen: (context) => const OtpScreen(),
     RouteName.resetPasswordScreen: (context) => const ResetPasswordScreen(),
+    RouteName.mainScreen: (context) => const MainScreen(),
 
   };
 }

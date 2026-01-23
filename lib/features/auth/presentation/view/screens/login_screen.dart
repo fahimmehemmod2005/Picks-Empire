@@ -105,6 +105,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         label: "login",
                         onTap: () {
                           if (_formKey.currentState!.validate()) {
+                            Navigator.pushReplacementNamed(context, RouteName.mainScreen);
                             print('Email: ${_userName.text.trim()}');
                             print('Password: ${_password.text.trim()}');
                             ScaffoldMessenger.of(context).showSnackBar(
@@ -136,7 +137,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16,),
                               ),
                             );
-                            print('Validation failed');
+                            print('login failed');
                           }
                         },
                       ),

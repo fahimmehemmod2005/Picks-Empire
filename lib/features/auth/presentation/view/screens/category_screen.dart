@@ -31,9 +31,7 @@ class CategoryScreen extends StatelessWidget {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  AppSizeBox.height25,
-                  const WidgetHeader(),
-                  AppSizeBox.height25,
+                  AppSizeBox.height50,
                   const TitleSubtitleBar(
                     title: "Which categories do you like?",
                     subtitle: "You can select up to 3",
