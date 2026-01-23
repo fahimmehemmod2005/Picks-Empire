@@ -152,6 +152,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                           },
                         ),
                       ),
+                      AppSizeBox.height10,
                     ],
                   );
                 },

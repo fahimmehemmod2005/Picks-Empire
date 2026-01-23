@@ -1,6 +1,7 @@
 import 'package:fdahunter/app/routes/route_name.dart';
 import 'package:fdahunter/core/constant/app_color.dart';
 import 'package:fdahunter/core/constant/app_images.dart';
+import 'package:fdahunter/core/constant/app_size_box.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
@@ -34,20 +35,22 @@ class _SplashScreenState extends State<SplashScreen> {
             fit: BoxFit.cover
             ),
         ),
-        Align(
-          alignment: AlignmentGeometry.center,
-          child: SizedBox(
-            height: 213.h,
-            width: 204.w,
-            child: Image.asset(AppImages.logo,fit: BoxFit.contain,)),
+        Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(
+                height: 213.h,
+                width: 204.w,
+                child: Image.asset(AppImages.logo,fit: BoxFit.contain,)),
+              AppSizeBox.height100,
+              CircularProgressIndicator(
+                color: AppColor.main,
+              )
+            ],
+          ),
         ),
-        Positioned(
-          left: 187,
-          bottom: 150,
-          child: CircularProgressIndicator(
-            color: AppColor.main,
-          )
-          )
+
         ]
       ),
     );

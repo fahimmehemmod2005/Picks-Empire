@@ -171,7 +171,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           },
                         ),
                       ),
-                      
+                      AppSizeBox.height10,
                     ],
                   );
                 },

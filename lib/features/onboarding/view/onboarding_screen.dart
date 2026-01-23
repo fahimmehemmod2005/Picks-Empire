@@ -111,6 +111,8 @@ class OnboardingScreen extends StatelessWidget {
                           provider.nextPage(onboarding.length, context);
                         },
                       ),
+
+                      AppSizeBox.height10,
                     ],
                   ),
                 ),
