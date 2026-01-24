@@ -1,6 +1,7 @@
 import 'package:fdahunter/app/widgets/my_scaffold.dart';
 import 'package:fdahunter/core/constant/app_color.dart';
 import 'package:fdahunter/features/home/view/screen/home_screen.dart';
+import 'package:fdahunter/features/home/view/screen/sports_picks_screen.dart';
 import 'package:fdahunter/features/main_screen/viewmodel/main_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -13,13 +14,18 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-
   final screens = [
     const HomeScreen(),
-    const Center(child: Text("Sports", style: TextStyle(color: Colors.white)),),
-    const Center(child: Text("Stocks", style: TextStyle(color: Colors.white)),),
-    const Center(child: Text("Crypto", style: TextStyle(color: Colors.white)),),
-    const Center(child: Text("Casino", style: TextStyle(color: Colors.white)),),
+    const SportsPicksScreen(),
+    const Center(
+      child: Text("Stocks", style: TextStyle(color: Colors.white)),
+    ),
+    const Center(
+      child: Text("Crypto", style: TextStyle(color: Colors.white)),
+    ),
+    const Center(
+      child: Text("Casino", style: TextStyle(color: Colors.white)),
+    ),
   ];
   final items = [
     {'icon': Icons.home_outlined, 'label': 'Home'},
@@ -38,10 +44,9 @@ class _MainScreenState extends State<MainScreen> {
 
           bottomNavigationBar: SafeArea(
             child: Container(
+              width: double.infinity,
               height: 70,
-              decoration: const BoxDecoration(
-                  color: Color(0xFF050B05)
-              ),
+              decoration: const BoxDecoration(color: Color(0xFF050B05)),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: List.generate(items.length, (index) {

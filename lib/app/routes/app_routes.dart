@@ -5,7 +5,9 @@ import 'package:fdahunter/features/auth/presentation/view/screens/login_screen.d
 import 'package:fdahunter/features/auth/presentation/view/screens/otp_screen.dart';
 import 'package:fdahunter/features/auth/presentation/view/screens/reset_password_screen.dart';
 import 'package:fdahunter/features/home/view/screen/home_screen.dart';
+import 'package:fdahunter/features/home/view/screen/sports_picks_screen.dart';
 import 'package:fdahunter/features/main_screen/view/main_screen.dart';
+import 'package:fdahunter/features/notification/view/screen/notification_screen.dart';
 import 'package:fdahunter/features/onboarding/view/onboarding_screen.dart';
 import 'package:flutter/material.dart';
 import '../../features/splash/splash_screen.dart';
@@ -14,7 +16,7 @@ import 'route_name.dart';
 class AppRoutes {
 
   // initialRoute
-  static const String initialRoute = RouteName.splashScreen;
+  static const String initialRoute = RouteName.mainScreen;
 
   static final Map<String, WidgetBuilder> routes = {
 
@@ -31,6 +33,8 @@ class AppRoutes {
     RouteName.resetPasswordScreen: (context) => const ResetPasswordScreen(),
     RouteName.mainScreen: (context) => const MainScreen(),
     RouteName.homeScreen: (context) => const HomeScreen(),
+    RouteName.sportsPickScreen: (context) => const SportsPicksScreen(),
+    RouteName.notificationScreen: (context) => const NotificationScreen(),
 
   };
 }

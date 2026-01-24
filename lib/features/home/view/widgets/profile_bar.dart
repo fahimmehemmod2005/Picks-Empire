@@ -1,3 +1,4 @@
+import 'package:fdahunter/app/routes/route_name.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/constant/app_color.dart';
@@ -54,7 +55,7 @@ class ProfileBar extends StatelessWidget {
             size: 26,
           ),
           onPressed: () {
-            // notification click
+            Navigator.pushNamed(context, RouteName.notificationScreen);
           },
         ),
       ],

@@ -1,5 +1,5 @@
 import 'package:fdahunter/app/routes/route_name.dart';
-import 'package:fdahunter/app/widgets/customrichtext.dart';
+import 'package:fdahunter/app/widgets/custom_rich_text.dart';
 import 'package:fdahunter/app/widgets/main_button.dart';
 import 'package:fdahunter/app/widgets/my_scaffold.dart';
 import 'package:fdahunter/app/widgets/title_subtitle_bar.dart';

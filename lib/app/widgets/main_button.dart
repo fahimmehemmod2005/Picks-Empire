@@ -6,18 +6,22 @@ class MainButton extends StatelessWidget {
   final String? label;
   final VoidCallback? onTap;
   final double? borderRadius;
+  final Color? backgroundColor;
+  final TextStyle? style;
   const MainButton({
     super.key, 
     this.label, 
     this.onTap, 
     this.borderRadius,
+    this.backgroundColor,
+    this.style,
     });
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppColor.main,
+        backgroundColor: backgroundColor ?? AppColor.main,
         minimumSize: Size(double.infinity, 50),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(borderRadius??12)),
@@ -25,7 +29,7 @@ class MainButton extends StatelessWidget {
       onPressed: onTap,
       child: Text(
         label ?? "",
-        style: AppTextStyles.size16w600(color: AppColor.background),
+        style: style ?? AppTextStyles.size16w600(color: AppColor.background),
       ),
     );
   }
