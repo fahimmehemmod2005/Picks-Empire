@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 class AppTextStyles {
   AppTextStyles._();
 
+  static TextStyle size40w700({Color? color}) => GoogleFonts.dmSans(fontSize: 40, fontWeight: FontWeight.w700, color: color,);
   static TextStyle size24w700({Color? color}) => GoogleFonts.dmSans(fontSize: 24, fontWeight: FontWeight.w700, color: color,);
   static TextStyle size14w400({Color? color}) => GoogleFonts.dmSans(fontSize: 14, fontWeight: FontWeight.w400, color: color,);
   static TextStyle size14w600({Color? color}) => GoogleFonts.dmSans(fontSize: 14, fontWeight: FontWeight.w600, color: color,);

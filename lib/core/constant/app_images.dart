@@ -15,4 +15,8 @@ class AppImages {
   static const String win = 'assets/images/win.jpg';
   static const String crown = 'assets/icons/crown.png';
   static const String cart = 'assets/icons/cart.png';
+  static const String visa = 'assets/icons/visa.png';
+  static const String master = 'assets/icons/master.png';
+  static const String stripe = 'assets/icons/stripe.png';
+  static const String success = 'assets/images/success.png';
 }

@@ -10,6 +10,8 @@ import 'package:fdahunter/features/onboarding/viewmodel/onboarding_view_model.da
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 
+import '../../features/subscription/viewmodel/payment_method_view_model.dart';
+
 class AppViewModels {
   static final List<SingleChildWidget> viewModels = [
     ChangeNotifierProvider<LoginViewModel>(
@@ -30,6 +32,8 @@ class AppViewModels {
       create: (_) => ResetPasswordViewModel(),
     ),ChangeNotifierProvider<MainViewModel>(
       create: (_) => MainViewModel(),
+    ),ChangeNotifierProvider<PaymentMethodViewModel>(
+      create: (_) => PaymentMethodViewModel(),
     ),
   ];
 }

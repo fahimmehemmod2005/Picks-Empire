@@ -1,3 +1,4 @@
+import 'package:fdahunter/app/routes/route_name.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -64,7 +65,9 @@ class FreeTrailActiveCard extends StatelessWidget {
             backgroundColor: Color(0xff0F1016),
             label: "Unlock Full Access - \$99/month",
             style: AppTextStyles.size16w700(color: AppColor.main),
-            onTap: () {},
+            onTap: () {
+              Navigator.pushNamed(context, RouteName.subscriptionScreen);
+            },
           ),
         ],
       ),

@@ -9,6 +9,10 @@ import 'package:fdahunter/features/home/view/screen/sports_picks_screen.dart';
 import 'package:fdahunter/features/main_screen/view/main_screen.dart';
 import 'package:fdahunter/features/notification/view/screen/notification_screen.dart';
 import 'package:fdahunter/features/onboarding/view/onboarding_screen.dart';
+import 'package:fdahunter/features/profile/presentation/view/screens/profile_screen.dart';
+import 'package:fdahunter/features/subscription/view/screen/payment_method_screen.dart';
+import 'package:fdahunter/features/subscription/view/screen/subscription_screen.dart';
+import 'package:fdahunter/features/subscription/view/screen/success_payment_screen.dart';
 import 'package:flutter/material.dart';
 import '../../features/splash/splash_screen.dart';
 import 'route_name.dart';
@@ -16,7 +20,7 @@ import 'route_name.dart';
 class AppRoutes {
 
   // initialRoute
-  static const String initialRoute = RouteName.mainScreen;
+  static const String initialRoute = RouteName.splashScreen;
 
   static final Map<String, WidgetBuilder> routes = {
 
@@ -35,6 +39,10 @@ class AppRoutes {
     RouteName.homeScreen: (context) => const HomeScreen(),
     RouteName.sportsPickScreen: (context) => const SportsPicksScreen(),
     RouteName.notificationScreen: (context) => const NotificationScreen(),
+    RouteName.subscriptionScreen: (context) => const SubscriptionScreen(),
+    RouteName.paymentMethodScreen: (context) => const PaymentMethodScreen(),
+    RouteName.successPaymentScreen: (context) => const SuccessPaymentScreen(),
+    RouteName.profileScreen: (context) => const ProfileScreen(),
 
   };
 }

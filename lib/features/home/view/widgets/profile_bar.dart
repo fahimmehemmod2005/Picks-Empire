@@ -16,7 +16,7 @@ class ProfileBar extends StatelessWidget {
       children: [
         GestureDetector(
           onTap: () {
-            // profile click
+            Navigator.pushNamed(context, RouteName.profileScreen);
           },
           child: const CircleAvatar(
             radius: 22,
