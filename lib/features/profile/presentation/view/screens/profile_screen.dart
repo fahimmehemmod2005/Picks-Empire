@@ -5,8 +5,6 @@ import 'package:fdahunter/core/constant/app_size_box.dart';
 import 'package:fdahunter/core/constant/app_text_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../../../../../app/widgets/custom_dialog_box.dart';
 import '../../../../../app/widgets/custom_dialog_box.dart';
 import '../../../../../app/widgets/my_scaffold.dart';
 import '../../../../auth/presentation/view/screens/forgot_screen.dart';

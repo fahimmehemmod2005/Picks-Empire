@@ -1,4 +1,3 @@
-import 'package:fdahunter/app/routes/route_name.dart';
 import 'package:fdahunter/app/widgets/input_field.dart';
 import 'package:fdahunter/app/widgets/main_button.dart';
 import 'package:fdahunter/app/widgets/my_scaffold.dart';

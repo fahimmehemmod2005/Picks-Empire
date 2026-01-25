@@ -20,11 +20,15 @@ class UserProfileStatus extends StatelessWidget {
           decoration: BoxDecoration(color: Colors.transparent),
           child: Stack(
             children: [
-              CircleAvatar(
-                radius: 25,
-                backgroundColor: Colors.white,
-                child: Image.asset(AppImages.profile,height: 52,width: 52,fit: BoxFit.cover,),
-              ),
+               Container(
+            height: 60.0.h,
+            width: 60.0.w,
+            decoration: BoxDecoration(
+              color: Colors.blue,
+              shape: BoxShape.circle,
+              image: DecorationImage(image: AssetImage(AppImages.fahim),fit: BoxFit.cover)
+            ),
+          ),
               Positioned(
                 top: 40,
                 left: 3,

@@ -1,12 +1,9 @@
-import 'package:fdahunter/app/widgets/custom_rich_text.dart';
-import 'package:fdahunter/app/widgets/main_button.dart';
 import 'package:fdahunter/app/widgets/my_scaffold.dart';
 import 'package:fdahunter/core/constant/app_color.dart';
 import 'package:fdahunter/core/constant/app_images.dart';
 import 'package:fdahunter/core/constant/app_size_box.dart';
 import 'package:fdahunter/core/constant/app_text_styles.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../widgets/custom_notification_card.dart';
 import '../widgets/free_trial_active.dart';

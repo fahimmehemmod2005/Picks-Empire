@@ -1,6 +1,6 @@
 import 'package:fdahunter/features/profile/presentation/viewmodel/edit_profile_show_dialog.dart';
 import 'package:flutter/material.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../core/constant/app_color.dart';
 import '../../../../../core/constant/app_images.dart';
 
@@ -18,11 +18,15 @@ class WidgetEditProfile extends StatelessWidget {
         decoration: BoxDecoration(color: Colors.transparent),
         child: Stack(
           children: [
-            CircleAvatar(
-              radius: 50,
-              backgroundColor: Colors.white,
-              child: Image.asset(AppImages.profile,height: 100,width: 100,fit: BoxFit.cover,),
+            Container(
+            height: 120.0.h,
+            width: 120.0.w,
+            decoration: BoxDecoration(
+              color: Colors.blue,
+              shape: BoxShape.circle,
+              image: DecorationImage(image: AssetImage(AppImages.fahim),fit: BoxFit.cover)
             ),
+          ),
             Positioned(
               top: 60,
               right: 10,

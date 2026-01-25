@@ -4,7 +4,6 @@ import 'package:fdahunter/app/widgets/main_button.dart';
 import 'package:fdahunter/app/widgets/widget_header.dart';
 import 'package:fdahunter/core/constant/app_size_box.dart';
 import 'package:fdahunter/features/profile/presentation/viewmodel/date_picker_view_model.dart';
-import 'package:fdahunter/features/profile/presentation/viewmodel/gender_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';

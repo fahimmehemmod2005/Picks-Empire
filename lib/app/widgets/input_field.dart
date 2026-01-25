@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 import 'package:fdahunter/core/constant/app_size_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
