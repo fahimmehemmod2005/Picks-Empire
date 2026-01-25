@@ -37,7 +37,7 @@ class AppRoutes {
     RouteName.onboardingScreen: (context) => const OnboardingScreen(),
     RouteName.forgotScreen: (context) => const ForgotScreen(from: '',),
     RouteName.otpScreen: (context) => const OtpScreen(from: ''),
-    RouteName.resetPasswordScreen: (context) => const ResetPasswordScreen(),
+    RouteName.resetPasswordScreen: (context) => const ResetPasswordScreen(from: '',),
     RouteName.mainScreen: (context) => const MainScreen(),
     RouteName.homeScreen: (context) => const HomeScreen(),
     RouteName.sportsPickScreen: (context) => const SportsPicksScreen(),

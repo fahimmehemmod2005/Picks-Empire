@@ -51,7 +51,7 @@ class _ForgotScreenState extends State<ForgotScreen> {
                       TitleSubtitleBar(
                         title: "Email Address",
                         subtitle:
-                        "Enter your email, and we’ll guide you to reset your password.",
+                        "Enter your email, and we'll guide you to reset your password.",
                       ),
                     AppSizeBox.height50,
                     InputField(

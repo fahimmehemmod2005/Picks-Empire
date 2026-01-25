@@ -20,17 +20,11 @@ class CreateAccountViewModel extends ChangeNotifier {
   // Full Name Validator
   String? validateFullName(String? name) {
     if (name == null || name.trim().isEmpty) {
-      return 'Full name is required';
+      return 'Enter your name';
     }
 
     if (name.trim().length < 3) {
       return 'Name must be at least 3 characters';
-    }
-
-    // only letters and space
-    final nameRegex = RegExp(r'^[a-zA-Z\s]+$');
-    if (!nameRegex.hasMatch(name.trim())) {
-      return 'Name can only contain letters and spaces';
     }
 
     return null;

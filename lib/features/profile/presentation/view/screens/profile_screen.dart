@@ -3,6 +3,7 @@ import 'package:fdahunter/app/widgets/widget_header.dart';
 import 'package:fdahunter/core/constant/app_color.dart';
 import 'package:fdahunter/core/constant/app_size_box.dart';
 import 'package:fdahunter/core/constant/app_text_styles.dart';
+import 'package:fdahunter/features/auth/presentation/view/screens/reset_password_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../../app/widgets/custom_dialog_box.dart';
@@ -53,7 +54,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
               SettingsListTile(
                 title: "Change Password",
                 icon1: Icons.lock_outline_rounded,
-                onTap: (){},
+                onTap: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (builder) => ResetPasswordScreen(from: 'profileScreen')));
+                },
               ),
               AppSizeBox.height25,
               SettingsListTile(
