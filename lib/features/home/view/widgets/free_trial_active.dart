@@ -16,21 +16,23 @@ class FreeTrailActiveCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(15.0),
-      width: double.infinity.w,
+      padding: EdgeInsets.all(15.w),
+      width: double.infinity,
       decoration: BoxDecoration(
         color: AppColor.main,
-        borderRadius: BorderRadius.circular(10.0.r),
+        borderRadius: BorderRadius.circular(10.r),
       ),
       child: Column(
         children: [
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Image.asset(
                 AppImages.crown,
                 color: Colors.orangeAccent,
-                height: 50.0,
-                width: 50.0,
+                height: 45.h,
+                width: 45.w,
+                fit: BoxFit.contain,
               ),
               AppSizeBox.width10,
               Expanded(
@@ -43,12 +45,14 @@ class FreeTrailActiveCard extends StatelessWidget {
                         color: AppColor.background,
                       ),
                     ),
+                    SizedBox(height: 4.h),
                     Text(
                       "2 days remaining - Join 10K + winners",
                       style: AppTextStyles.size14w400(
-                        color: Color(0xff4A4C56),
+                        color: const Color(0xff4A4C56),
                       ),
                     ),
+                    SizedBox(height: 6.h),
                     Text(
                       "50% off your first sub with code:\nWELCOME50",
                       style: AppTextStyles.size14w400(
@@ -60,9 +64,9 @@ class FreeTrailActiveCard extends StatelessWidget {
               ),
             ],
           ),
-          AppSizeBox.height10,
+          SizedBox(height: 12.h),
           MainButton(
-            backgroundColor: Color(0xff0F1016),
+            backgroundColor: const Color(0xff0F1016),
             label: "Unlock Full Access - \$99/month",
             style: AppTextStyles.size16w700(color: AppColor.main),
             onTap: () {
