@@ -67,7 +67,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    AppSizeBox.height25,
+                    AppSizeBox.height5,
                     WidgetHeader(),
                     AppSizeBox.height25,
                     TitleSubtitleBar(

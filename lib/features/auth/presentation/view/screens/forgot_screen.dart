@@ -42,7 +42,7 @@ class _ForgotScreenState extends State<ForgotScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    AppSizeBox.height25,
+                    AppSizeBox.height5,
                     WidgetHeader(),
                     AppSizeBox.height25,
                     if(widget.from == 'profileScreen')

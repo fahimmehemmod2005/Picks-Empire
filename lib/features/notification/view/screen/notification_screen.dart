@@ -126,7 +126,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
                 moreButton: true,
                 onTap: () {},
               ),
-              AppSizeBox.height10,
+              AppSizeBox.height5,
               Text(
                 "Recent",
                 style: AppTextStyles.size28w500(color: AppColor.title),
