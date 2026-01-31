@@ -57,13 +57,7 @@ class MyScaffold extends StatelessWidget {
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        body: AnnotatedRegion<SystemUiOverlayStyle>(
-          value: const SystemUiOverlayStyle(
-            statusBarIconBrightness: Brightness.light,
-            statusBarBrightness: Brightness.dark,
-          ),
-          child: body ?? const SizedBox(),
-        ),
+        body: body,
         appBar: appBar,
         bottomNavigationBar: bottomNavigationBar,
         floatingActionButton: floatingActionButton,

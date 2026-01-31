@@ -44,88 +44,82 @@ class OnboardingScreen extends StatelessWidget {
     return Consumer<OnboardingViewModel>(
       builder: (context, provider, child) {
         return Scaffold(
-          body:  AnnotatedRegion<SystemUiOverlayStyle>(
-            value: const SystemUiOverlayStyle(
-              statusBarIconBrightness: Brightness.light,
-              statusBarBrightness: Brightness.dark,
+          body:  Stack(
+          children: [
+            // PageView
+            PageView.builder(
+              controller: provider.pageController,
+              itemCount: onboarding.length,
+              onPageChanged: provider.onPageChanged,
+              itemBuilder: (context, index) {
+                return Image.asset(
+                  onboarding[index]['image']!,
+                  fit: BoxFit.cover,
+                );
+              },
             ),
-            child: Stack(
-            children: [
-              // PageView
-              PageView.builder(
-                controller: provider.pageController,
-                itemCount: onboarding.length,
-                onPageChanged: provider.onPageChanged,
-                itemBuilder: (context, index) {
-                  return Image.asset(
-                    onboarding[index]['image']!,
-                    fit: BoxFit.cover,
-                  );
-                },
-              ),
 
-              // Bottom content
-              SafeArea(
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Text(
-                        onboarding[provider.currentIndex]['title']!,
-                        textAlign: TextAlign.center,
-                        style: AppTextStyles.size24w700(color: Colors.white),
-                      ),
+            // Bottom content
+            SafeArea(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      onboarding[provider.currentIndex]['title']!,
+                      textAlign: TextAlign.center,
+                      style: AppTextStyles.size24w700(color: Colors.white),
+                    ),
 
-                      Text(
-                        onboarding[provider.currentIndex]['subtitle']!,
-                        textAlign: TextAlign.center,
-                        style: AppTextStyles.size14w400(color: Colors.white70),
-                      ),
+                    Text(
+                      onboarding[provider.currentIndex]['subtitle']!,
+                      textAlign: TextAlign.center,
+                      style: AppTextStyles.size14w400(color: Colors.white70),
+                    ),
 
-                      AppSizeBox.height20,
+                    AppSizeBox.height20,
 
-                      // Indicator
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: List.generate(
-                          onboarding.length,
-                          (index) => AnimatedContainer(
-                            duration: const Duration(milliseconds: 300),
-                            margin: const EdgeInsets.symmetric(horizontal: 4),
-                            height: 8.h,
-                            width: provider.currentIndex == index ? 26.w : 8.w,
-                            decoration: BoxDecoration(
-                              color: provider.currentIndex == index
-                                  ? AppColor.main
-                                  : Colors.white38,
-                              borderRadius: BorderRadius.circular(20),
-                            ),
+                    // Indicator
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: List.generate(
+                        onboarding.length,
+                        (index) => AnimatedContainer(
+                          duration: const Duration(milliseconds: 300),
+                          margin: const EdgeInsets.symmetric(horizontal: 4),
+                          height: 8.h,
+                          width: provider.currentIndex == index ? 26.w : 8.w,
+                          decoration: BoxDecoration(
+                            color: provider.currentIndex == index
+                                ? AppColor.main
+                                : Colors.white38,
+                            borderRadius: BorderRadius.circular(20),
                           ),
                         ),
                       ),
+                    ),
 
-                      AppSizeBox.height20,
+                    AppSizeBox.height20,
 
-                      // Button
-                      MainButton(
-                        label: provider.currentIndex == onboarding.length - 1
-                            ? "Get Started"
-                            : "Continue",
-                        borderRadius: 30,
-                        onTap: () {
-                          provider.nextPage(onboarding.length, context);
-                        },
-                      ),
+                    // Button
+                    MainButton(
+                      label: provider.currentIndex == onboarding.length - 1
+                          ? "Get Started"
+                          : "Continue",
+                      borderRadius: 30,
+                      onTap: () {
+                        provider.nextPage(onboarding.length, context);
+                      },
+                    ),
 
-                      AppSizeBox.height10,
-                    ],
-                  ),
+                    AppSizeBox.height10,
+                  ],
                 ),
               ),
-            ],
-          ),
-        )
+            ),
+          ],
+                    )
         );
       },
     );

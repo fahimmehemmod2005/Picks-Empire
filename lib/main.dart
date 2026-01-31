@@ -27,6 +27,7 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
           title: 'fdahunter',
           debugShowCheckedModeBanner: false,
+          darkTheme: ThemeData.dark(),
           initialRoute: AppRoutes.initialRoute,
           routes: AppRoutes.routes,
         );

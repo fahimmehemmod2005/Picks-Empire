@@ -24,20 +24,14 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     body: AnnotatedRegion<SystemUiOverlayStyle>(
-        value: const SystemUiOverlayStyle(
-          statusBarIconBrightness: Brightness.light,
-          statusBarBrightness: Brightness.dark,
-        ),
-        child: SizedBox(
-        height: double.infinity.h,
-        width: double.infinity.w,
-        child: Image.asset(
-            AppImages.background,
-            fit: BoxFit.cover
-        ),
-      ),
-    ),
+     body: SizedBox(
+     height: double.infinity.h,
+     width: double.infinity.w,
+     child: Image.asset(
+         AppImages.background,
+         fit: BoxFit.cover
+     ),
+           ),
     );
   }
 }
