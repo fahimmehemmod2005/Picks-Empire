@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
           title: 'fdahunter',
           debugShowCheckedModeBanner: false,
           darkTheme: ThemeData.dark(),
+          themeMode: ThemeMode.dark,
           initialRoute: AppRoutes.initialRoute,
           routes: AppRoutes.routes,
         );
