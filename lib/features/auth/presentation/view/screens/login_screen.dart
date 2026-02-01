@@ -168,7 +168,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     AppSizeBox.height15,
                     SocialButton(
                       icon: AppImages.apple,
-                      label: "continue with google",
+                      label: "continue with apple",
                       onTap: () {},
                     ),
                     AppSizeBox.height20,
